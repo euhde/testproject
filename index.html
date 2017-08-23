@@ -1,8 +1,45 @@
-<html>
-    <head>
-    </head>
+<!doctype html>
+<html ng-app>
     
-    <body>
-    </body>
+  <head>
+      <title>My AngularJS App</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  </head>
+    
+  <body>
+      <div ng-app="myApp">
+    <div ng-controller="testCtrl">
+      <h1> Adam Quirk's Personal Website </h1>
+      <h3> Adam's Favorite Liquor </h3>
+      <ol>
+          <li>Songbird Coffee</li>
+          <li>Flora</li>
+          <li>Lake House</li>
+          <li>Tiki Rum</li>
+          <li>Gin</li>
+          <li>Bramble</li>
+          <li>Vodka</li> 
+      </ol>
+      <h4> Adam's Projects</h4>
+       <ul>
+           <li> Cardinal Spirits Website</li>
+           <li> Spirit Finder</li>
+           <li> Quirk Adventures</li>
+           <li> Foundation: WordPress Theme</li>
+           <li> bespoke </li>
+      </ul>
+      <img src="http://static1.squarespace.com/static/5249c667e4b085b754f2b0e7/t/53614887e4b0b9aa739ba5eb/1503438601932/?format=1500w"> 
+      <script> angular.module('myApp', []).controller('testCtrl',function($scope) {
+    $scope.test = "hello world";
+}
+                                      
+);</script>
+      <div>
+        {{$scope.test}}
+      </div>
+      </div>
+      </div>
+
+  </body>
     
 </html>
